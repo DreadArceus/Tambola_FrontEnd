@@ -4,7 +4,7 @@ const cells = document.getElementsByClassName("cell");
 const key = prompt("Enter key:");
 getTicket = async () => {
   var ticketData = [];
-  await fetch(`http://127.0.0.1:8000/ticket/${key}`)
+  await fetch(`https://tambola-django.herokuapp.com/ticket/${key}`)
     .then((response) => {
       return response.json();
     })
@@ -44,7 +44,7 @@ document.getElementById("claim-btn").addEventListener("click", () => {
       ticket_state += "0";
     }
   }
-  fetch(`http://127.0.0.1:8000/claim/${ticket_state}/${key}`)
+  fetch(`https://tambola-django.herokuapp.com/claim/${ticket_state}/${key}`)
   .then((response) => {
     return response.json();
   })
