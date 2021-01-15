@@ -16,7 +16,7 @@ getTicket = async () => {
       heading.textContent = "Your Ticket";
     })
     .catch((err) => {
-      console.log("fk");
+      console.log(err);
     });
   for (var i = 0; i < 9; i++) {
     for (var j = 0; j < 3; j++) {
@@ -57,6 +57,6 @@ document.getElementById("claim-btn").addEventListener("click", () => {
       console.log("Claim Successful");
     })
     .catch((err) => {
-      console.log("fk");
+      console.log(err);
     });
 });
